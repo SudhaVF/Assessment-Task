@@ -1,5 +1,7 @@
 <template>
+  <Topbar />
   <Navbar />
+  <div class="page-content">
   <section>
   <div class="slider-container">
     
@@ -34,10 +36,11 @@
   <Welder />
   <Testimonial />
   <Newsletter />
-  
+  </div>
 </template>
 
 <script setup>
+import Topbar from '~/components/Topbar.vue'
 import Navbar from '~/components/Navbar.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
@@ -74,6 +77,10 @@ onBeforeUnmount(stopAutoSlide)
 </script>
 
 <style scoped>
+
+.page-content{
+  /* margin-top: 100px; */
+}
 
 .slider-container {
   position: relative;

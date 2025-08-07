@@ -1,5 +1,6 @@
 <template>
-  <section id="about">
+  <Navbar />
+  
     <div class="about-banner" >
       <div class="overlay">
         <div class="banner-content">
@@ -9,25 +10,26 @@
       </div>
     </div>
     <About />
-    </section>
+    
     </template>
     <script setup>
   import About from '~/components/About.vue'
+  import Navbar from '~/components/Navbar.vue'
   </script>
     <style scoped>
     
     .about-banner {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 250px;
-  background-image: url('/images/carousel-2.jpg'); /* Replace with your background path */
+  background-image: url('/images/carousel-1.jpg'); 
   background-size: cover;
   background-position: center;
-  margin-top: 60px; /* Adjust if you have fixed nav */
+  /* margin-top: 60px;  */
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  background-color: rgba(0, 0, 0, 0.6); 
   height: 100%;
   display: flex;
   align-items: center;

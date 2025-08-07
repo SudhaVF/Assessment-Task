@@ -1,77 +1,58 @@
 <template>
-  <header>
-    <div class="top-bar">
-      <div class="container">
-        <div class="logo">WELDORK</div>
-        <div class="left-info">
-          <span><i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA</span>
-          <span><i class="fas fa-envelope"></i> info@example.com</span>
-          <span><i class="fas fa-phone"></i> +012 345 67890</span>
-        </div>
-        <div class="right-icons">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-linkedin-in"></i>
-        </div>
-      </div>
-    </div>
-
+  
     <nav class="main-nav">
       <div class="container">
-        <ul class="nav-links">
-          <li><a href="#slider-container">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
+        
+        <ul class="nav-links" :class="{ 'show': showMenu }">
+          <li><a href="/">HOME</a></li>
+          <li><NuxtLink to="/about1">ABOUT</NuxtLink></li>
           <li><NuxtLink to="/service1">SERVICES</NuxtLink></li>
           <li class="dropdown">
-            <a href="#">PAGES<i class="fas fa-chevron-down"></i></a>
+            <NuxtLink to="#">PAGES<i class="fas fa-chevron-down"></i></NuxtLink>
             <ul class="dropdown-menu">
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Testimonial</a></li>
-              <li><a href="#">Appointment</a></li>
-              <li><a href="#">404 Page</a></li>
+              <li><NuxtLink to="/features">Features</NuxtLink></li>
+              <li><NuxtLink to="/welder">Our Team</NuxtLink></li>
+              <li><NuxtLink to="/testimonial">Testimonial</NuxtLink></li>
+              <li><NuxtLink to="/appointment">Appointment</NuxtLink></li>
+              <li><NuxtLink to="/errorpage">404 Page</NuxtLink></li>
             </ul>
           </li>
-          <li><a href="#">CONTACT</a></li>
+          <li><NuxtLink to="/contact">CONTACT</NuxtLink></li>
         </ul>
-        <a href="#"><button class="quote-btn">GET A QUOTE</button></a>
+        <NuxtLink to=""><button class="quote-btn">GET A QUOTE</button></NuxtLink>
       </div>
     </nav>
-  </header>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+const showMenu = ref(false)
+const toggleMenu = () => {
+  showMenu.value = !showMenu.value
+}
 </script>
 
 <style>
-body {
-  padding-top: 90px; /* Push content down below fixed header */
-}
+body{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+} 
 </style>
 
 <style scoped>
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.top-bar {
-  background-color: #c7932c;
-  color: white;
-  font-size: 14px;
-  padding: 10px 0;
-}
 
 .main-nav {
   background-color: white;  
-  height: 50px;
+  position: sticky;
+  /* height: 50px; */
   padding: 0 12px;
+  top: 0;
+  z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -79,52 +60,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
-.logo {
-  font-size: 24px;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  color: white;
-  margin-left: 15px;
-}
-
-.left-info {
-  margin-left: 300px;
-}
-
-.left-info span {
-  margin-right: 10px;
-  font-family: "Poppins", sans-serif;
-  display: inline-flex;
-  align-items: center;
-  font-size: 10px;
-}
-
-.left-info i {
-  margin-right: 5px;
-  font-size: 8px;
-}
-
-.right-icons {
-  margin-right: 60px;
-}
-
-.right-icons i {
-  margin-left: 10px;
-  cursor: pointer;
-  background-color: white;
-  color: #c7932c;
-  padding: 5px;
-  font-size: 10px;
-}
 
 .nav-links {
   display: flex;
   list-style: none;
   gap: 25px;
   margin-right: 35px;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 .nav-links li {
