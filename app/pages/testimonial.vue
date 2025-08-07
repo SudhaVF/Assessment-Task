@@ -1,35 +1,31 @@
 <template>
-    <div>
     <Navbar />
     <div class="about-banner" >
       <div class="overlay">
         <div class="banner-content">
-          <h1>SERVICES</h1>
-          <p><span>Home</span> / <span>Pages</span> / <span class="current">Services</span></p>
+          <h1>TESTIMONIAL</h1>
+          <p><span>Home</span> / <span>Pages</span> / <span class="current">Testimonial</span></p>
         </div>
       </div>
     </div>
-        <Services />
-    </div>
+    <Testimonial />
+    <Newsletter />
 </template>
-
-<script setup>
-import Services from '~/components/Services.vue'
-import Navbar from '~/components/Navbar.vue'
-
-</script>
-
-<style scoped>
+ <script setup>
+   import Navbar from '~/components/Navbar.vue'
+   import Testimonial from '~/components/Testimonial.vue'
+   import Newsletter from '~/components/Newsletter.vue'
+  </script>
+    <style scoped>
     
     .about-banner {
   position: relative;
   width: 100vw;
   height: 250px;
-  background-image: url('/images/carousel-1.jpg');
+  background-image: url('/images/carousel-1.jpg'); 
   background-size: cover;
   background-position: center;
-  /* margin-top: 60px; */
-  background-repeat: no-repeat; 
+  /* margin-top: 60px;  */
 }
 
 .overlay {

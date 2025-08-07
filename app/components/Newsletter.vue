@@ -89,9 +89,28 @@ export default {
 </script>
 
 <style scoped>
-.complete-section{
-  background-image:url('/images/carousel-3.jpg');
+.complete-section {
+  position: relative;
+  margin-top: 100px;
+  /* height: 400px; */
+  overflow: hidden;
+  z-index: 1;
 }
+
+.complete-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 350px;
+  background-image: url('/images/carousel-3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.4); 
+  z-index: -1;
+}
+
 .newsletter {
   display: flex;
   justify-content: space-between;
