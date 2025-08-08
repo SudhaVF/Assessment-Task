@@ -73,30 +73,32 @@ const services = [
 </script>
 
 <style scoped>
-/* Section styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .welding-section {
   padding: 60px 20px;
   background-color: white;
-  /* font-family: Arial, sans-serif; */
+ 
   text-align: center;
 }
 
-/* Container */
+
 .container {
   max-width: 1200px;
   margin: auto;
 }
 
-/* Title */
+
 .title {
   font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 40px;
+  font-family: "Roboto",sans-serif;
   
 }
 
-/* Grid layout for cards */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -106,7 +108,7 @@ const services = [
   
 }
 
-/* Card styles */
+
 .card {
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -120,6 +122,8 @@ const services = [
   position: relative;
   overflow: hidden;
   color: black;
+  animation: fadeUp;
+  
 }
 
 .card::before {
@@ -143,7 +147,7 @@ const services = [
   color: white;
 }
 
-/* Ensure all content is above the overlay */
+
 .card > * {
   position: relative;
   z-index: 1;
@@ -160,7 +164,7 @@ const services = [
   background-color: #fff;
 }
 
-/* Image container */
+
 .img-container {
   overflow: hidden;
   
@@ -182,7 +186,7 @@ const services = [
   transform: scale(1.05);
 }
 
-/* Card body */
+
 .card-body {
   padding: 20px;
   /* background-color: inherit; */
@@ -231,5 +235,67 @@ const services = [
     font-weight: normal;
     margin-left: 1px;
 }
+
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .img-container img {
+    height: 200px;
+    top: 0;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .img-container img {
+    height: 180px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .card-title {
+    width: auto;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .card-text {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .read-more {
+    margin: 0 auto 15px auto;
+    display: inline-block;
+  }
+}
+
 
 </style>

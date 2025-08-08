@@ -10,13 +10,19 @@
       </div>
     </div>
         <Services />
+        <Appointment />
+        <Testimonial />
+        <Newsletter />
+        <Scroll />
     </div>
 </template>
 
 <script setup>
 import Services from '~/components/Services.vue'
 import Navbar from '~/components/Navbar.vue'
-
+import Appointment from '~/components/Appointment.vue'
+import Testimonial from '~/components/Testimonial.vue'
+import Newsletter from '~/components/Newsletter.vue'
 </script>
 
 <style scoped>

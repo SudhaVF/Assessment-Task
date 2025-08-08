@@ -56,6 +56,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .team-section {
   padding: 60px 20px;
   background-color: white;
@@ -168,4 +169,57 @@ export default {
   font-family: "Poppins", sans-serif;
   /* padding: 0; */
 }
+
+@media screen and (max-width: 768px) {
+  .team-container {
+    flex-wrap: wrap; 
+    overflow-x: hidden;
+    justify-content: center;
+    margin-left: 0; 
+    gap: 20px;
+    height: auto;
+  }
+
+  .team-card {
+    width: 80%; 
+    max-width: 400px;
+  }
+
+  .image-wrapper {
+    height: 200px; 
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .team-name {
+    font-size: 16px;
+  }
+
+  .team-role {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-card {
+    width: 100%; 
+    max-width: none;
+    height: auto;
+  }
+
+  .image-wrapper {
+    height: 180px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+}
+
+
 </style>
+
+

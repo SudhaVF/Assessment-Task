@@ -46,6 +46,7 @@
     
   </section>
   </div>
+  
 </template>
 
 <script setup>
@@ -53,6 +54,7 @@
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .welding-section {
   background-color: #fdfdfd;
   padding: 40px 20px;
@@ -96,7 +98,7 @@
   font-weight: bold;
   margin-bottom: 10px;
   margin-top: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   
 }
 
@@ -123,10 +125,10 @@
 }
 
 .feature pre {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 10px;
   color:black;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   width: 200px;
   height: 200px;
@@ -185,9 +187,9 @@
   border-width: 5px;
   /* height: 50px; */
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   color:#2B2C2E;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   
 }
 
@@ -243,14 +245,18 @@
   .left-column img {
     width: 100%;
     height: auto;
-    margin-left: 0;
+    margin-left: 15px;
   }
 
   .box-background {
-    top: -10px;
-    left: 10%;
-    width: 100px;
-    height: 150px;
+    top: -20px;
+    left: -7%;
+    width: 150px;
+    height: 120%;
+    z-index: 1;
+    
+    position: absolute;
+   
   }
 
   .right-column {

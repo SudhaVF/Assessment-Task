@@ -13,7 +13,7 @@
     <Features />
     <Welder />
     <Newsletter />
-    
+    <Scroll />
     </template>
     <script setup>
   import About from '~/components/About.vue'

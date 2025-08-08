@@ -22,6 +22,7 @@
     </main>
   </div>
   <Newsletter />
+  <Scroll />
 </template>
 
 <script>

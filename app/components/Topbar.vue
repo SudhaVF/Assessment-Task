@@ -36,7 +36,7 @@
 
 .logo {
   font-size: 24px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: white;
   margin-left: 15px;

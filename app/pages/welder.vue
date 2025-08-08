@@ -10,6 +10,7 @@
     </div>
     <Welder />
     <Newsletter />
+    <Scroll />
 </template>
 
  <script setup>
