@@ -36,10 +36,12 @@
   <Welder />
   <Testimonial />
   <Newsletter />
+  <Scroll />
   </div>
 </template>
 
 <script setup>
+import Scroll from '~/components/Scroll.vue'
 import Topbar from '~/components/Topbar.vue'
 import Navbar from '~/components/Navbar.vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
@@ -77,11 +79,10 @@ onBeforeUnmount(stopAutoSlide)
 </script>
 
 <style scoped>
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .page-content{
   /* margin-top: 100px; */
 }
-
 .slider-container {
   position: relative;
   height: 100vh;
@@ -126,10 +127,10 @@ onBeforeUnmount(stopAutoSlide)
 }
 
 .slide-content h1 {
-  font-size: 72px;
+  font-size: 75px;
   font-weight: 800;
   line-height: 1.3;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto",sans-serif;
 }
 
 .btn {
@@ -175,4 +176,53 @@ onBeforeUnmount(stopAutoSlide)
 .image-column img.active {
   border-color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .slider-container {
+    height: 85vh;
+  }
+
+  .slide-content {
+    padding-top: 40px; 
+  }
+
+  .slide-content h1 {
+    font-size: 32px; 
+    line-height: 1.3;
+  }
+
+  .slide-content p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider-container {
+    height: 90vh; 
+  }
+
+  .slide-content {
+    padding-top: 30px; 
+  }
+
+  .slide-content h1 {
+    font-size: 26px;
+  }
+
+  .slide-content p {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+}
+
 </style>

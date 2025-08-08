@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .appointment-section {
   position: relative;
   display: flex;
@@ -89,7 +89,7 @@ export default {
 }
 
 .left-section h2 {
-  font-size: 28px;
+  font-size: 20px;
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
 }
@@ -180,6 +180,7 @@ hr{
   height: 30px;
   background-color: #f0efef;
   border: none;
+  font-family: "Poppins",sans-serif;
 }
 
 .form-row select {
@@ -197,6 +198,7 @@ hr{
   background-color: #f0efef;
   width: 400px;
   border: none;
+  font-family: "Poppins",sans-serif;
 }
 
 .form-box button {
@@ -214,4 +216,62 @@ hr{
   /* background-color: black; */
   color: black;
 }
+
+
+@media screen and (max-width: 768px) {
+  
+  .right-section {
+    width: 100% !important;
+    max-width: 90% !important; 
+    margin: 0 auto !important;
+    padding: 20px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  .right-section h2 {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .right-section .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    
+  }
+
+  
+  .right-section input,
+  .right-section select,
+  .right-section textarea,
+  .right-section button {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    
+  }
+  .form-row input{
+    /* height: 40px; */
+    padding: 10px;
+  }
+  .form-row select{
+    padding: 10px;
+  }
+
+  .right-section textarea {
+    height: 120px;
+  }
+
+  .right-section button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
 </style>

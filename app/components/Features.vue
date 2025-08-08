@@ -160,6 +160,53 @@ p {
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 2px;
-
 }
+
+@media screen and (max-width: 768px) {
+  .feature-section {
+    padding: 100px 30px; 
+  }
+
+  .container {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    justify-content: center;
+    /* gap: 7px; */
+  }
+
+  .feature-card {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: calc(50% - 20px);
+    padding: 30px 15px 15px;
+  }
+
+  .icon-box {
+    top: -15px;
+    left: 0px;
+    width: 35px;
+    height: 35px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .read-more {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .feature-card {
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+}
+
 </style>

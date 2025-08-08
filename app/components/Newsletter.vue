@@ -1,6 +1,6 @@
 <template>
   <section class="complete-section">
-    <!-- Newsletter Section -->
+    
     <div class="newsletter">
       <div class="newsletter-content">
         <h2>NEWSLETTER</h2>
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <!-- Footer Section -->
+    
     <footer class="footer">
       <div class="footer-top">
         <div class="footer-column">
@@ -176,7 +176,7 @@ export default {
   font-size: 10px;
 }
 
-/* Footer */
+
 .footer {
   background: #343535;
   color: #fff;
@@ -266,4 +266,84 @@ export default {
   font-weight: 200;
 
 }
+
+
+
+@media screen and (max-width: 768px) {
+  
+  .newsletter {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .newsletter-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 20px;
+  }
+
+  .newsletter-content p {
+    font-size: 16px;
+    padding-left: 0;
+    text-indent: 0;
+    max-width: 100%;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+ 
+  .footer-column.gallery .gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .footer-column.gallery .gallery-images img {
+    width: 48%;
+    height: auto;
+  }
+
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+}
+
 </style>

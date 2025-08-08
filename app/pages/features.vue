@@ -12,6 +12,7 @@
     <Features />
     <Choose />
     <Newsletter />
+    <Scroll />
 </template>
 
 

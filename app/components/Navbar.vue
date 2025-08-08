@@ -2,7 +2,9 @@
   
     <nav class="main-nav">
       <div class="container">
-        
+        <div class="menu-toggle" @click="toggleMenu">
+         <i class="fas fa-bars"></i>
+        </div>
         <ul class="nav-links" :class="{ 'show': showMenu }">
           <li><a href="/">HOME</a></li>
           <li><NuxtLink to="/about1">ABOUT</NuxtLink></li>
@@ -34,9 +36,9 @@ const toggleMenu = () => {
 
 <style>
 body{
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+  padding: 0px;
+  /* margin: 0; */
+  
 } 
 </style>
 
@@ -51,6 +53,7 @@ body{
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   width: 100%;
+  max-width: 100vw;
   
 }
 .container {
@@ -60,6 +63,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   
 }
 
@@ -151,5 +155,101 @@ body{
 
 .quote-btn:hover {
   color: black;
+}
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu li a {
+    padding-left: 20px;
+  }
+
+  .quote-btn {
+    margin: 10px 0 0 auto;
+  }
+  .menu-toggle {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu li a {
+    padding-left: 20px;
+  }
+
+  /* .quote-btn {
+    margin: 10px 0 0 auto;
+  } */
+}
 }
 </style>

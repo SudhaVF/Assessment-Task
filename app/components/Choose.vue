@@ -1,10 +1,10 @@
 <template>
   <section class="why-section" ref="sectionRef">
     <div class="container">
-      <!-- Left Image Section -->
+     
       <div class="left"></div>
 
-      <!-- Right Content Section -->
+      
       <div class="right">
         <h2>WHY YOU SHOULD CHOOSE OUR<br />WELDING SERVICES</h2>
         <p class="desc">
@@ -112,7 +112,7 @@ export default {
 
 .container {
   display: flex;
-  flex-direction: row; /* Ensure left on left and right on right */
+  flex-direction: row; 
   flex-wrap: nowrap;
   /* min-height: 400px; */
 }
@@ -245,23 +245,82 @@ h2 {
   /* align-self: flex-end; */
 }
 
-/* Responsive Fix */
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+    
   }
 
   .left,
   .right {
     flex: 1 1 100%;
+    min-height: 250px; 
   }
 
-  .left {
-    order: 1;
+  .stats {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  .right {
-    order: 2;
+  .stat-box {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .desc {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .progress-bars {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .label {
+    font-size: 11px;
+    
+  }
+
+  .percent {
+    font-size: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .left {
+    min-height: 200px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 11px;
+  }
+
+  .stat-box h3 {
+    font-size: 22px;
+  }
+
+  .stat-box p {
+    font-size: 11px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .percent {
+    font-size: 11px;
+  }
+}
+
 </style>

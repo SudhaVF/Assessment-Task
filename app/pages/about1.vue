@@ -10,11 +10,17 @@
       </div>
     </div>
     <About />
-    
+    <Features />
+    <Welder />
+    <Newsletter />
+    <Scroll />
     </template>
     <script setup>
   import About from '~/components/About.vue'
   import Navbar from '~/components/Navbar.vue'
+  import Features from '~/components/Features.vue'
+  import Welder from '~/components/Welder.vue'
+  import Newsletter from '~/components/Newsletter.vue'
   </script>
     <style scoped>
     

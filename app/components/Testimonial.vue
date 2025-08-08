@@ -6,7 +6,7 @@
     </div>
 
     <div class="testimonial-wrapper">
-      <!-- Side Avatars -->
+      
       <div class="side-avatars">
         <div
           v-for="(avatar, index) in sideAvatars"
@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <!-- Testimonial Slider -->
+      
       <div class="testimonial-content relative">
         <Swiper
           :modules="[Navigation, Autoplay]"
@@ -105,6 +105,7 @@ const clients = [
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .testimonial-section {
   padding: 50px 30px;
   background-color: #fff;
@@ -286,4 +287,56 @@ const clients = [
   font-size: 18px;
   font-weight: bold;
 } */
+
+
+
+@media screen and (max-width: 768px) {
+  .testimonial-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-left: 0;
+  }
+
+  .side-avatars {
+    grid-template-columns: repeat(2, 70px);
+    gap: 15px;
+    justify-content: center;
+    margin: 0;
+  }
+  .side-avatars .avatar-box {
+    width: 70px;
+    height: 70px;
+  }
+  .side-avatars .avatar-box:nth-child(2),
+  .side-avatars .avatar-box:nth-child(3),
+  .side-avatars .avatar-box:nth-child(4) {
+    margin: 0;
+  }
+
+  .testimonial-content {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 30px;
+  }
+
+  .testimonial-card {
+    padding: 15px;
+  }
+
+  .client-info {
+    gap: 10px;
+  }
+  .client-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .arrow-nav {
+    justify-content: left;
+    gap: 30px;
+    margin-top: 15px;
+  }
+}
+
 </style>

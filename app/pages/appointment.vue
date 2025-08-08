@@ -10,6 +10,7 @@
     </div>
     <Appointment />
     <Newsletter />
+    <Scroll />
 </template>
  
 <script setup>

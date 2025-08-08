@@ -10,6 +10,7 @@
     </div>
     <Testimonial />
     <Newsletter />
+    <Scroll />
 </template>
  <script setup>
    import Navbar from '~/components/Navbar.vue'
