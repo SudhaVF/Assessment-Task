@@ -148,7 +148,7 @@ body{
   width: 100px;
   font-size: 10px;
   font-family: "Poppins", sans-serif;
-  margin-right: 50px;
+  margin-right: 70px;
   margin-bottom: 10px;
  
 }

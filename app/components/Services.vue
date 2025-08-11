@@ -78,7 +78,6 @@ const services = [
 .welding-section {
   padding: 60px 20px;
   background-color: white;
- 
   text-align: center;
 }
 
@@ -86,6 +85,8 @@ const services = [
 .container {
   max-width: 1200px;
   margin: auto;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 

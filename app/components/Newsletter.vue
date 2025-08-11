@@ -181,12 +181,14 @@ export default {
   background: #343535;
   color: #fff;
   font-size: 14px;
+  
 }
 .footer-top {
   display: flex;
   justify-content: space-around;
   padding: 40px 20px;
   flex-wrap: wrap;
+  margin-left: 50px;
 }
 .footer-column {
   flex: 1;
@@ -206,6 +208,7 @@ export default {
   margin-bottom: 15px;
   color: white;
   font-family: "Roboto", sans-serif;
+  font-size: 13px;
 }
 .footer-column ul {
   list-style: none;
@@ -216,6 +219,7 @@ export default {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   color: #797672;
+  font-size: 11px;
  
 }
 .footer-column ul li i{
@@ -314,6 +318,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+   
   }
 
   .footer-column {
