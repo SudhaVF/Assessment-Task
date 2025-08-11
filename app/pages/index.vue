@@ -82,6 +82,13 @@ onBeforeUnmount(stopAutoSlide)
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .page-content{
   /* margin-top: 100px; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 .slider-container {
   position: relative;
@@ -224,5 +231,17 @@ onBeforeUnmount(stopAutoSlide)
     font-size: 12px;
   }
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* hides horizontal scroll */
+}
+
+* {
+  box-sizing: border-box;
+}
+
 
 </style>
